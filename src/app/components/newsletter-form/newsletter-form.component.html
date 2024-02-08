@@ -1,0 +1,22 @@
+<section class="form-section">
+    <div class="text">
+        <h3>
+            Fique por dentro do Mercado
+        </h3>
+        <p>A atualização pode levar a melhorias na eficiência operacional, reduzindo custos, eliminando desperdícios e aumentando a produtividade. Isso pode resultar em maior lucratividade e vantagem competitiva. O mercado está constantemente evoluindo devido a mudanças tecnológicas, tendências do consumidor, regulamentações governamentais e concorrência. Empresas que não se atualizam correm o risco de ficar obsoletas e perder participação de mercado.</p>
+    </div>
+    <form [formGroup]="newsletterForm">
+        <label for="name">Name</label>
+        <input id="name" formControlName="name"/>
+        <label for="email">Email</label>
+        <input id="email" formControlName="email"/>
+        <btn-primary 
+            btn-text="se inscreva" 
+            variant="secondary"
+            (submit)="onSubmit()"
+            [disabled]="!newsletterForm.valid"
+            [loading]="loading()"
+        >
+        </btn-primary>
+    </form>
+</section>
